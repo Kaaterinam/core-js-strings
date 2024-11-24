@@ -41,10 +41,7 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  if (typeof value === 'string' || value instanceof String) {
-    return true;
-  }
-  return false;
+  return typeof value === 'string' || value instanceof String;
 }
 
 /**
@@ -227,10 +224,7 @@ function sumOfCodes(str) {
  *   startsWith('Hello World', 'Hello') => true
  */
 function startsWith(str, substr) {
-  if (str.startsWith(substr)) {
-    return true;
-  }
-  return false;
+  return str.startsWith(substr);
 }
 
 /**
@@ -245,10 +239,7 @@ function startsWith(str, substr) {
  *   endsWith('Hello World', 'Hello') => false
  */
 function endsWith(str, substr) {
-  if (str.endsWith(substr)) {
-    return true;
-  }
-  return false;
+  return str.endsWith(substr);
 }
 
 /**
@@ -267,8 +258,7 @@ function endsWith(str, substr) {
 function formatTime(minutes, seconds) {
   const paddedMin = String(minutes).padStart(2, '0');
   const paddedSec = String(seconds).padStart(2, '0');
-  const result = `${paddedMin}:${paddedSec}`;
-  return result;
+  return `${paddedMin}:${paddedSec}`;
 }
 
 /**
@@ -352,7 +342,7 @@ function countVowels(str) {
  * https://en.wikipedia.org/wiki/Palindrome
  *
  * @param {string} str - The input string.
- * @return {bool} - True if the string is a palindrome, false otherwise.
+ * @return {boolean} - True if the string is a palindrome, false otherwise.
  *
  * @example:
  *   isPalindrome('madam') => true
